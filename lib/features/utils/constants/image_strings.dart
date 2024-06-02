@@ -10,7 +10,7 @@ class TImages{
   static const String facebook="assets/logos/facebook.png";
 
   //Onboarding Images
-  static const String OnBoardingImage1="assets/images/on_boarding_image/sammy-line-searching.gif";
-  static const String OnBoardingImage2="assets/images/on_boarding_image/sammy-line-shopping.gif";
-  static const String OnBoardingImage3="assets/images/on_boarding_image/sammy-line-delivery.gif";
+  static const String OnBoardingImage1="assets/on_boarding_images/searching.gif";
+  static const String OnBoardingImage2="assets/on_boarding_images/shopping.gif";
+  static const String OnBoardingImage3="assets/on_boarding_images/delivery.gif";
 }

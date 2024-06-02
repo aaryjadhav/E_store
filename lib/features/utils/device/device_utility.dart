@@ -55,11 +55,14 @@ class TDeviceUtils {
     return kBottomNavigationBarHeight;
   }
 
+  static double getAppBarHeight(){
+    return kToolbarHeight;
+  }
   static double getKeyboardHeight() {
     final viewInsets = MediaQuery.of(Get.context!).viewInsets;
     return viewInsets.bottom;
   }
-
+  
   static Future<bool> isKeyboardVisible() async {
     final viewInsets = View.of(Get.context!).viewInsets;
     return viewInsets.bottom > 0;
