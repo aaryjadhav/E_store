@@ -8,4 +8,9 @@ class TImages{
   //Social logos
   static const String google="assets/logos/google.png";
   static const String facebook="assets/logos/facebook.png";
+
+  //Onboarding Images
+  static const String OnBoardingImage1="assets/images/on_boarding_image/sammy-line-searching.gif";
+  static const String OnBoardingImage2="assets/images/on_boarding_image/sammy-line-shopping.gif";
+  static const String OnBoardingImage3="assets/images/on_boarding_image/sammy-line-delivery.gif";
 }
