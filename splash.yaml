@@ -4,7 +4,7 @@ flutter_native_splash:
   image: /Users/aaryjadhav/StudioProjects/E_store/assets/logos/store-darklogo.png
   image_dark: /Users/aaryjadhav/StudioProjects/E_store/assets/logos/store-lightlogo.png
 
-android_12:
+android_13:
   color: '#FFFFFF'
   color_dark: '#272727'
   image: /Users/aaryjadhav/StudioProjects/E_store/assets/logos/store-darklogo.png

@@ -1,6 +1,13 @@
 class TTexts {
   //Global texts
+  static const String and="and";
+  static const String skip="skip";
+  static const String done="done";
+  static const String submit="submit";
+  static const String appName="Fauget";
+  static const String tContinue="Continue";
 
+  
   //Onboarding texts
   static const onBoardingTitle1="Choose your Product";
   static const onBoardingTitle2="Select Payment Method";
@@ -24,9 +31,9 @@ class TTexts {
   static const String createAcount="Create Account";
   static const String orSignInWith="Or sign in with";
   static const String orSignUpWith="Or sign up with";
-  static const String iAgreeto="I agree to";
-  static const String privacyPolicy="Privacy Policy";
-  static const String termsOfUse="Terms of Use";
+  static const String iAgreeto="I agree to ";
+  static const String privacyPolicy="Privacy Policy ";
+  static const String termsOfUse=" Terms of Use";
   static const String verification="Verification Code";
   static const String resendEmail="Resend E-mail";
   static const String resendEmailIn="Resend e-mail in";
