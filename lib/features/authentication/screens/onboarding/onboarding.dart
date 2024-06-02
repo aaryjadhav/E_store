@@ -1,4 +1,6 @@
+import 'package:e_store/features/authentication/controllers.onboarding/onboarding_controller.dart';
 import 'package:e_store/features/authentication/screens/onboarding/widgets/onboardingdotnavigation.dart';
+import 'package:e_store/features/authentication/screens/onboarding/widgets/onboardingnextbutton.dart';
 import 'package:e_store/features/authentication/screens/onboarding/widgets/onboardingpage.dart';
 import 'package:e_store/features/authentication/screens/onboarding/widgets/onboardingskipbutton.dart';
 import 'package:e_store/features/utils/constants/image_strings.dart';
@@ -18,11 +20,15 @@ class OnBoardingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(OnBoardingController());
+
     return Scaffold(
       body: Stack(
         children: [
           //Horizotal scrollable pages
           PageView(
+            controller: controller.pageController,
+            onPageChanged: controller.updatePageIndicator,
             children: [
               OnBoardingPage(
                 image: TImages.OnBoardingImage1,
@@ -49,30 +55,6 @@ class OnBoardingScreen extends StatelessWidget {
           //Circular button
           OnBoardingNextButton(),
         ],
-      ),
-    );
-  }
-}
-
-class OnBoardingNextButton extends StatelessWidget {
-  const OnBoardingNextButton({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final dark = THelperFunction.isDarkMode(context);
-    return Positioned(
-      right: TSizes.defaultSpace,
-      bottom: TDeviceUtils.getBottomNavigationBarHeight(),
-      child: ElevatedButton(
-        onPressed: () {},
-        style: ElevatedButton.styleFrom(
-            shape: CircleBorder(),
-            backgroundColor: dark ? TColors.primaryColor : TColors.black),
-        child: const Icon(
-          Iconsax.arrow_right_3,
-        ),
       ),
     );
   }
