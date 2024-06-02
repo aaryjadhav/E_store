@@ -1,3 +1,4 @@
+import 'package:e_store/features/authentication/screens/onboarding/widgets/onboardingdotnavigation.dart';
 import 'package:e_store/features/authentication/screens/onboarding/widgets/onboardingpage.dart';
 import 'package:e_store/features/authentication/screens/onboarding/widgets/onboardingskipbutton.dart';
 import 'package:e_store/features/utils/constants/image_strings.dart';
@@ -6,6 +7,8 @@ import 'package:e_store/features/utils/constants/text_string.dart';
 import 'package:e_store/features/utils/device/device_utility.dart';
 import 'package:e_store/features/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:iconsax/iconsax.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../../utils/constants/colors.dart';
@@ -44,29 +47,33 @@ class OnBoardingScreen extends StatelessWidget {
           //Dot navigation SmoothPageIndicator
           OnBoardingBottomNavigation(),
           //Circular button
+          OnBoardingNextButton(),
         ],
       ),
     );
   }
 }
 
-class OnBoardingBottomNavigation extends StatelessWidget {
-  const OnBoardingBottomNavigation({
+class OnBoardingNextButton extends StatelessWidget {
+  const OnBoardingNextButton({
     super.key,
   });
-   
+
   @override
   Widget build(BuildContext context) {
-       final dark = THelperFunction.isDarkMode(context);
-
+    final dark = THelperFunction.isDarkMode(context);
     return Positioned(
-        bottom: TDeviceUtils.getBottomNavigationBarHeight() + 25,
-        left: TSizes.defaultSpace,
-        child: SmoothPageIndicator(
-          controller: PageController(),
-          count: 3,
-          effect:  ExpandingDotsEffect(
-              activeDotColor: dark ? TColors.light: TColors.dark, dotHeight: 6),
-        ));
+      right: TSizes.defaultSpace,
+      bottom: TDeviceUtils.getBottomNavigationBarHeight(),
+      child: ElevatedButton(
+        onPressed: () {},
+        style: ElevatedButton.styleFrom(
+            shape: CircleBorder(),
+            backgroundColor: dark ? TColors.primaryColor : TColors.black),
+        child: const Icon(
+          Iconsax.arrow_right_3,
+        ),
+      ),
+    );
   }
 }
