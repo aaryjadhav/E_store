@@ -33,8 +33,10 @@ class TTexts {
 
 
 //Authentication Headings Text
-  static const LoginTitle="Welcome back";
-  static const LoginSubTitle="Discover Limitless Choices and Unmatched Convenience.";
+  static const String LoginTitle="Welcome back";
+  static const String LoginSubTitle="Discover Limitless Choices and Unmatched Convenience.";
+  static const String SignUpTitle="Let's create a new account";
+  static const String ForgotPasswordTitle="Forgot Password";
 
   //Home
   static const homeAppbarTitle="Good day for shopping";
