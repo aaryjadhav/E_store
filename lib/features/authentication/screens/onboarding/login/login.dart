@@ -1,9 +1,16 @@
 import 'package:e_store/common/styles/spacing_styles.dart';
+import 'package:e_store/common/widgets/loginin_signup/social_icons.dart';
+import 'package:e_store/common/widgets/loginin_signup/form_divider.dart';
+import 'package:e_store/features/authentication/screens/onboarding/login/widgets/login_form.dart';
+import 'package:e_store/features/authentication/screens/onboarding/login/widgets/login_header.dart';
+import 'package:e_store/features/utils/constants/colors.dart';
 import 'package:e_store/features/utils/constants/image_strings.dart';
 import 'package:e_store/features/utils/constants/sizes.dart';
 import 'package:e_store/features/utils/constants/text_string.dart';
 import 'package:e_store/features/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:iconsax/iconsax.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -19,28 +26,17 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             children: [
               //Logo, Titile & Sub-title
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Image(
-                    height: 150,
-                    image: AssetImage(
-                        dark ? TImages.lightAppLogo : TImages.darkAppLogo),
-                  ),
-                  Text(TTexts.LoginTitle,style: Theme.of(context).textTheme.headlineMedium,),
-                  const SizedBox(height: TSizes.sm),
-                  Text( TTexts.LoginSubTitle,style: Theme.of(context).textTheme.bodyMedium,)
-                ],
-              ),
-
+              LoginHeader(dark: dark),
+              // const SizedBox(
+              //   height: TSizes.defaultSpace,
+              // ),
               //Form
-              Form(child: Column(
-                children: [
-                  TextFormField(
-                    decoration
-                  )
-                ],
-              )),
+              LoginForm(),
+              //Divider
+              FormDivider(dark: dark, dividerText: TTexts.orSignInWith.capitalize!,),
+              SizedBox(height: TSizes.spaceBtwSections,),
+              //Footer
+              SocialIcons(),
             ],
           ),
         ),
@@ -48,3 +44,4 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
+

@@ -1,4 +1,4 @@
-import 'package:e_store/features/authentication/controllers.onboarding/onboarding_controller.dart';
+import 'package:e_store/features/authentication/controllers/onboarding_controller.dart';
 import 'package:e_store/features/utils/constants/colors.dart';
 import 'package:e_store/features/utils/constants/sizes.dart';
 import 'package:e_store/features/utils/device/device_utility.dart';
