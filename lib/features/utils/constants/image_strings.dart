@@ -13,4 +13,8 @@ class TImages{
   static const String OnBoardingImage1="assets/on_boarding_images/searching.gif";
   static const String OnBoardingImage2="assets/on_boarding_images/shopping.gif";
   static const String OnBoardingImage3="assets/on_boarding_images/delivery.gif";
+
+  //Email Verification Images
+  static const String EmailVerificationImage1="assets/on_boarding_images/email_verification_image1.png";
+  static const String EmailVerificationImage2="assets/on_boarding_images/email_verification_image2.png";
 }
