@@ -2,8 +2,8 @@ class TTexts {
   //Global texts
   static const String and="and";
   static const String skip="skip";
-  static const String done="done";
-  static const String submit="submit";
+  static const String done="Done";
+  static const String submit="Submit";
   static const String appName="Fauget";
   static const String tContinue="Continue";
 

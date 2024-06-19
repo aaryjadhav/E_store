@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
+import '../../password_configuration/forget_password.dart';
+
 class LoginForm extends StatelessWidget {
   const LoginForm({
     super.key,
@@ -52,7 +54,7 @@ class LoginForm extends StatelessWidget {
     
               //Forget Password
               TextButton(
-                onPressed: () {},
+                onPressed: () => Get.to(() => const ForgetPassword()),
                 child: const Text(TTexts.forgotPassword),
               ),
             ],
