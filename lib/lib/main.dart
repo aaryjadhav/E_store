@@ -10,6 +10,5 @@ void main() {
   //Todo: Initialize Firebase
   //Todo: Initialize Authentication
 
-  runApp(const App(
-  ));
+  runApp(const App());
 }
